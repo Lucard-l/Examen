@@ -1,0 +1,39 @@
+<script>
+    const fetch = require('node-fetch');
+
+async function fetchPokemon() {
+    try {
+        const response = await fetch('https://pokeapi.co/api/v2/pokemon/1/');
+        const data = await response.json();
+        
+        const abilities = data.abilities.map(({ ability }) => ability.name);
+        
+
+        abilities.push('fire');
+        
+        const modifiedData = {
+            id: data.id,
+            name: data.name,
+            abilities: abilities
+        };
+        
+
+        const modifiedJson = JSON.stringify(modifiedData, null, 2);
+        
+
+        return modifiedJson;
+        
+    } catch (error) {
+        console.error('Error fetching Pokemon data:', error);
+        return null;
+    }
+}
+
+fetchPokemon().then(modifiedJson => {
+    if (modifiedJson) {
+        console.log(modifiedJson);
+    } else {
+        console.log('No se pudo obtener el JSON modificado.');
+    }
+});
+</script>
