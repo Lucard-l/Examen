@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estropical</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <script src="./script.js"></script>
+    <div class="container">
+        <h2>Formulario de Validación</h2>
+        <form id="formulario" onsubmit="return validarFormulario()">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+            </div>
+            <div class="form-group">
+                <label for="paisResidencia">País de Residencia:</label>
+                <select id="paisResidencia" name="paisResidencia" required>
+                    <option value="">Seleccionar país</option>
+                    <option value="Bolivia">Bolivia</option>
+                    <option value="Paraguay">Paraguay</option>
+                    <option value="Perú">Perú</option>
+                    <option value="Brasil">Brasil</option>
+                </select>
+            </div>
+            <div class="form-group acomodar">
+                <label>Intereses:</label>
+                <input type="checkbox" id="deportes" name="intereses" value="Deportes">
+                <label for="deportes"> Deportes</label>
+                <input type="checkbox" id="musica" name="intereses" value="Música">
+                <label for="musica"> Música</label>
+                <input type="checkbox" id="lectura" name="intereses" value="Lectura">
+                <label for="lectura"> Lectura</label>
+                <input type="checkbox" id="viajes" name="intereses" value="Viajes">
+                <label for="viajes"> Viajes</label>
+            </div>
+            <div class="form-group acomodar">
+                <label>Género:</label><br>
+                <input type="radio" id="generoM" name="genero" value="Masculino" required>
+                <label for="generoM"> Masculino</label>
+                <input type="radio" id="generoF" name="genero" value="Femenino">
+                <label for="generoF"> Femenino</label>
+                <input type="radio" id="generoOtro" name="genero" value="Otro">
+                <label for="generoOtro"> Otro</label>
+            </div>
+            <div class="form-group">
+                <label for="dniImagen">Documento de identidad (imagen):</label>
+                <input type="file" id="dniImagen" name="dniImagen" accept="image/*" required>
+            </div>
+            <div class="form-group acomodar">
+                <label for="discapacidad">Discapacidad:</label>
+                <input type="checkbox" id="discapacidad" name="discapacidad" value="Sí">
+                <label for="discapacidad"> Sí</label>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>

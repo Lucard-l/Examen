@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    max-width: 600px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    color: #1e73be;
+    text-align: center;
+}
+.form-group {
+    margin-bottom: 1.5rem;
+}
+label {
+    color: #555555;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+input[type="file"],
+button,
+input[type="checkbox"],
+input[type="radio"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type="checkbox"],
+input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+}
+.acomodar {
+    display: flex;
+    flex-wrap: wrap;
+}
+.acomodar label {
+    margin-right: 20px;
+}
+button {
+    background-color: #1e73be;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+button:hover {
+    background-color: #02254b;
+}
+.error {
+    color: red;
+    font-size: 0.8rem;
+}

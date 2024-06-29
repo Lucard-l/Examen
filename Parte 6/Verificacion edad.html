@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificacion Edad</title>
+</head>
+<body>
+    <script>
+        const nombre = prompt("Ingrese su nombre:");
+        const apellido = prompt("Ingrese su apellido:");
+        const edad = parseInt(prompt("Ingrese su edad:"), 10);
+        const esMayorEdad = edad >= 18;
+
+        const persona = {
+            nombre: nombre,
+            apellido: apellido,
+            edad: edad,
+            esMayorEdad: esMayorEdad,
+            NombreCompleto: function() {
+                return this.nombre + " " + this.apellido;
+            }
+        };
+if (persona.esMayorEdad) {
+    alert("El cliente " + persona.NombreCompleto() + " es mayor de edad tiene " + persona.edad + " años.");
+} else {
+    alert("El cliente " + persona.NombreCompleto() + " es menor de edad tiene " + persona.edad + " años.");
+}
+    </script>
+</body>
+</html>
